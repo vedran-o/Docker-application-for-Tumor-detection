@@ -1,6 +1,6 @@
 # Docker-application-for-Tumor-detection
 Tumor detection app using: Docker, Flask, Jinja, MariaDB, and HTML, CSS, JS basics.
-My task was creating backend ML model and deploying Flask app (I created initial HTML site in frontend).
+My task was to create backend ML model, database (I tried Posteger, MySQL and MariaDB) and to deploy Flask app (I created initial HTML site in frontend and connected it with Jinja to backend).
 
 
 # UMS završni ispit - predviđanje tumora #
