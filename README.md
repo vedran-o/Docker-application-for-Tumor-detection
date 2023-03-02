@@ -2,10 +2,6 @@
 Tumor detection app using: Docker, Flask, Jinja, MariaDB, and HTML, CSS, JS basics.
 
 
-
-
-{%hackmd @themes/orangeheart %}
-
 # UMS završni ispit - predviđanje tumora #
 Vedran Orešković, Dominik Kinkela, Erik Bašić
 
