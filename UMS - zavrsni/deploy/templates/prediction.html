@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tumor Detection App</title>
+</head>
+{% if cancer=='Benign' %}
+<body style="background-color: lime;">
+  <h2>Cancer type:</h2>
+  <h1>Benign</h1>
+</body>
+{% else %}
+<body style="background-color: red;">
+  <h2>Cancer type:</h2>
+  <h1>Malignant</h1>
+</body>
+{% endif %}
+</html>

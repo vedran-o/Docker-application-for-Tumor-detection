@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tumor Detection App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <h1>Tumor Detection App</h1>
+  <div class="container">
+    <div class="left">
+      <form action="#" method="post">
+        <label for="mean_radius">Mean radius:</label>
+        <input type="text" id="mean_radius" name="mean radius" value=""><br>
+    
+        <label for="mean_texture">Mean texture:</label>
+        <input type="text" id="mean_texture" name="mean texture" value=""><br>
+    
+        <label for="mean_perimeter">Mean perimeter:</label>
+        <input type="text" id="mean_perimeter" name="mean perimeter" value=""><br>
+    
+        <label for="mean_area">Mean area:</label>
+        <input type="text" id="mean_area" name="mean area" value=""><br>
+    
+        <label for="mean_smoothness">Mean smoothness:</label>
+        <input type="text" id="mean_smoothness" name="mean smoothness" value=""><br>
+    
+        <label for="mean_compactness">Mean compactness:</label>
+        <input type="text" id="mean_compactness" name="mean compactness" value=""><br>
+    
+        <label for="mean_concavity">Mean concavity:</label>
+        <input type="text" id="mean_concavity" name="mean concavity" value=""><br>
+    
+        <label for="mean_concave_points">Mean concave points:</label>
+        <input type="text" id="mean_concave_points" name="mean concave points" value=""><br>
+    
+        <label for="mean_symmetry">Mean symmetry:</label>
+        <input type="text" id="mean_symmetry" name="mean symmetry" value=""><br>
+    
+        <label for="mean_fractal_dimension">Mean fractal dimension:</label>
+        <input type="text" id="mean_fractal_dimension" name="mean fractal dimension" value=""><br>
+    
+        <label for="radius_error">Radius error:</label>
+        <input type="text" id="radius_error" name="radius error" value=""><br>
+    
+        <label for="texture_error">Texture error:</label>
+        <input type="text" id="texture_error" name="texture error" value=""><br>
+    
+        <label for="perimeter_error">Perimeter error:</label>
+        <input type="text" id="perimeter_error" name="perimeter error" value=""><br>
+    
+        <label for="area_error">Area error:</label>
+        <input type="text" id="area_error" name="area error" value=""><br>
+    
+        <label for="smoothness_error">Smoothness error:</label>
+        <input type="text" id="smoothness_error" name="smoothness error" value=""><br>
+    
+        <label for="compactness_error">Compactness error:</label>
+        <input type="text" id="compactness_error" name="compactness error" value=""><br>
+    
+        <label for="concavity_error">Concavity error:</label>
+        <input type="text" id="concavity_error" name="concavity error" value=""><br>
+    
+        <label for="concave_points_error">Concave points error:</label>
+        <input type="text" id="concave_points_error" name="concave points error" value=""><br>
+            
+        <label for="symmetry_error">Symmetry error:</label>
+        <input type="text" id="symmetry_error" name="symmetry error" value=""><br>
+            
+        <label for="fractal_dimension_error">Fractal dimension error:</label>
+        <input type="text" id="fractal_dimension_error" name="fractal dimension error" value=""><br>
+            
+        <label for="worst_radius">Worst radius:</label>
+        <input type="text" id="worst_radius" name="worst radius" value=""><br>
+            
+        <label for="worst_texture">Worst texture:</label>
+        <input type="text" id="worst_texture" name="worst texture" value=""><br>
+            
+        <label for="worst_perimeter">Worst perimeter:</label>
+        <input type="text" id="worst_perimeter" name="worst perimeter" value=""><br>
+            
+        <label for="worst_area">Worst area:</label>
+        <input type="text" id="worst_area" name="worst area" value=""><br>
+                
+        <label for="worst_smoothness">Worst smoothness:</label>
+        <input type="text" id="worst_smoothness" name="worst smoothness" value=""><br>
+                    
+        <label for="worst_compactness">Worst compactness:</label>
+        <input type="text" id="worst_compactness" name="worst compactness" value=""><br>
+                        
+        <label for="worst_concavity">Worst concavity:</label>
+        <input type="text" id="worst_concavity" name="worst concavity" value=""><br>
+                            
+        <label for="worst_concave_points">Worst concave points:</label>
+        <input type="text" id="worst_concave_points" name="worst concave points" value=""><br>
+        
+        <label for="worst_symmetry">Worst symmetry:</label>
+        <input type="text" id="worst_symmetry" name="worst symmetry" value=""><br>
+        
+        <label for="worst_fractal_dimension">Worst fractal dimension:</label>
+        <input type="text" id="worst_fractal_dimension" name="worst fractal dimension" value="">
+        
+        <label></label>
+        <input type="submit" value="Predict">
+      </form>
+    </div>
+
+    <div class="right">
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Request time</th>
+          <th>Calculation time (μs)</th>
+          <th>Prediction</th>
+        </thead>
+        <!-- {% block content %} -->
+        {% for row in db %}
+        <tr>
+          <td>{{ row.id }}</td>
+          <td>{{ row.request_time }}</td>
+          <td text-align="right";>{{ row.calculation_time }}</td>
+          <td>{{ row.prediction_label }}</td>
+        </tr>
+        {% endfor %}
+        <!-- {% endblock %} -->
+      </table>
+      <img src="{{ url_for('static', filename='rak.png') }}">
+    </div>
+  </div>
+</body>
+</html>

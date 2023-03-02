@@ -1,0 +1,32 @@
+version: '3'
+services:
+  app:
+    image: breast_cancer_class:1.0
+    container_name: app
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_DATABASE=bazaTumori
+      - MYSQL_USER=vedran99
+      - MYSQL_PASSWORD=vedran99
+      - MYSQL_ROOT_PASSWORD=vedran99
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network
+    volumes:
+      - db_data:/var/lib/mysql
+networks:
+  my-network:
+    driver: bridge
+volumes:
+  db_data:
+
